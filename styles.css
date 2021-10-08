@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+  --color1:#5847EB;
+  --color2:#FF8C66;
+  --color3:#56C2E6;
+  --color4:#FF5C7C;
+  --color5:#4ACF81;
+  --color6:#7536D3;
+  --color7:#F1C65B;
+  --color8:#3d3f46;
+  --color9:#0F1424;
+  --color10:#1C1F4A;
+  --color11:#6F76C8;
+  --color12:#BDC1FF;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  background: var(--color9);
+}
+
+/******************* DESKTOP GRID SYSTEM *******************/
+main {
+  max-width: 950px;
+  margin:0 auto;
+  width: 80vw;
+  height: 400px;
+  margin-top:120px;
+  /* grid */
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "custom first second third "
+                        "custom fourth fifth sixth";
+}
+
+main div {
+  /*background: blue;*/
+  border-radius: 15px;
+}
+
+main div:nth-child(1){grid-area: custom;}
+main div:nth-child(2){grid-area: first;}
+main div:nth-child(3){grid-area: second;}
+main div:nth-child(4){grid-area: third;}
+main div:nth-child(5){grid-area: fourth;}
+main div:nth-child(6){grid-area: fifth;}
+main div:nth-child(7){grid-area: sixth;}
+
+
+/********************************* MOBILE GRID SYSTEM **********************************/
+
+                    /*     in the 'media_queries.css' file     */
+
+
+/************************************* BIG LEFT BOX *************************************/
+.custom-box {
+  background:var(--color10);
+  width: 90%;
+  height:95%;
+  margin:10px;
+  color:white;
+  font-weight: 300;
+  } 
+.custom-box  div:nth-child(1) {
+  width:100%;
+  height: 260px;
+  background:var(--color6);
+  position: relative;
+}
+.custom-box div:nth-child(1) img {
+  width: 70px;
+  display: block;
+  position: absolute;
+  top:20px;
+  left:20px;
+  border:2px solid white;
+  border-radius: 50%;
+}
+.custom-box div:nth-child(1) span {
+  position: absolute;
+  top:110px;
+  left:20px;
+  font-size: 12px;
+}
+.custom-box div:nth-child(1) p {
+  position: absolute;
+  top:130px;
+  left:20px;
+  font-size: 30px;
+}
+.control-button {
+  display: block;
+  /* margin:17px 20px; */
+  font-size: 14px;
+  margin: 17px;
+  background-color: #1C1F4A;
+  color:white;
+  border:#1C1F4A;
+  opacity: .5;
+}
+.control-button:hover,
+.control-button:active {
+  opacity:1;
+  cursor: pointer;
+}
+
+
+/************************************* SIX BOXES *******************************************/
+.six-basic-box {
+  position: relative;
+  overflow: hidden;
+  margin:10px;
+}
+.first-of-six {background:var(--color2);}
+.second-of-six {background:var(--color3);}
+.third-of-six {background:var(--color4);}
+.fourth-of-six {background:var(--color5);}
+.fifth-of-six {background:var(--color6);}
+.sixth-of-six {background:var(--color7);}
+
+.six-basic-box div {
+  position: absolute;
+  bottom:0;
+  left:0;
+  background:var(--color10);
+  color: white;
+  width:100%;
+  height:80%;
+  border-radius: 15px 15px 0 0;
+}
+svg {
+  position: absolute;
+  top:-15px;
+  right:10px;
+}
+.six-basic-box div p {
+  position: absolute;
+  top:20px;
+  left:20px;
+  font-size: 18px;
+}
+.six-basic-box div i {
+  position: absolute;
+  top:20px;
+  right:20px;
+}
+.six-basic-box div h1 {
+  position: absolute;
+  top:60px;
+  left:20px;
+  font-weight: 300;
+  font-size: 36px;
+}
+.six-basic-box div span {
+  position: absolute;
+  bottom:26px;
+  left:20px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+/******************************* FRONTEND MENTOR ATTRIBUTION ***********************/
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+  margin-bottom:20px;
+  color:var(--color8);
+}
+.attribution a { 
+  color: var(--color11);
+}
+
+
+
+
+
+
+
+
+

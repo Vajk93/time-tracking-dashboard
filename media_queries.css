@@ -1,0 +1,78 @@
+/********************************* MOBILE GRID SYSTEM **********************************/
+@media screen and (max-width:600px) {
+  main {
+    margin:0 auto;
+    width: 100vw;
+    height: 1500px; 
+    margin-top:0;
+    /* grid */
+    display:grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas: 
+    "custom"
+    "first" 
+    "second" 
+    "third" 
+    "fourth"
+    "fifth" 
+    "sixth";
+    }
+
+/******************************** LEFT CUSTOM BOX ***************************************/
+  .custom-box {
+    background:var(--color10);
+    width: 95%;
+    height:200px;
+    } 
+  .custom-box div:nth-child(1) {
+    height: 150px;
+  }
+  .custom-box div:nth-child(1) img {
+    width: 70px;
+    display: block;
+    position: absolute;
+    top:40px;
+    left:30px;
+    border:2px solid white;
+    border-radius: 50%;
+  }
+  .custom-box div:nth-child(1) span {
+    position: absolute;
+    top:55px;
+    left:120px;
+  }
+  .custom-box div:nth-child(1) p {
+    position: absolute;
+    top:75px;
+    left:120px;
+    font-size: 20px;
+  }
+  .time-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+/**************************************** SIX BOXES ***************************************/
+  .six-basic-box div h1 {
+    position: absolute;
+    top:60px;
+    left:20px;
+    font-weight: 300;
+    font-size: 36px;
+  }
+  .six-basic-box div span {
+    text-align: right;
+    position: absolute;
+    top:75px;
+    right: 20px;
+  }
+}
+
+/**************************************** A LITTLE PLUS FOR RESPONSIVITY ************************/
+@media screen and (max-width:900px) {
+  main {
+    width: 100%;
+  }
+}
